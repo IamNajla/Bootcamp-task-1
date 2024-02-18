@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    padding: 0.7rem;
+}
+:root{
+    --color--primary: rgb(33, 159,149,100%);
+    --color--secondary: rgb(175, 206,221,100%);
+
+    --font--color--dark: rgb(35, 72,148 ,100%);
+    --font--color--light: rgb(105, 105, 105,100%);
+
+    --border--radius--first: 8px;
+    --border--radius--second: 6px;
+}
+h1{
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+h2{
+    font-size: 1.3rem;
+}
+.request--items{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+}
+.request--item{
+    background-color: rgba(213, 224, 230, 0.329);
+    padding: 1rem 0.5rem;
+    border-radius: var(--border--radius--first);
+}
+
+/* ITEMS HEADER*/
+.header--item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.intro--detail{
+    color: var(--font--color--dark);
+    font-size: 1rem;
+    margin-right: 0.25rem;
+}
+.intro--number{
+    background-color: var(--color--secondary);
+    border-radius: var(--border--radius--second);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    color: var(--font--color--dark);
+    font-weight: 700;
+}
+.header--date{
+    color: var(--font--color--light);
+    font-weight: 100;
+}
+
+/* ITEMS BODY */
+.body--item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.item--code{
+    color: var(--font--color--light);
+    font-weight: 100;
+}
+
+/* ITEMS FOOTER */
+.footer--item{
+    display: flex;
+    justify-content: space-between;
+}
+.footer--item img{
+    width: 25px;
+    border-radius: var(--border--radius--first);
+}
+.image--item{
+    display: flex;
+}
+.image--item .image--name{
+   align-self: center; 
+   margin-right: 0.25rem;
+}
+.footer--item button{
+    background-color: var(--color--primary);
+    border-radius: var(--border--radius--first);
+    outline: 0;
+    border: 0;
+    padding: 0.5rem 0.7rem;
+    font-family: vazirmatn;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (min-width:768px) {
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    .request--items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .intro--detail ,
+    .intro--number ,
+    .header--date{
+        font-size: 1.3rem;
+    }
+    
+    
+}
+@media screen and (min-width:1024px) {
+    .request--items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+    .footer--item img{
+        width: 40px;
+    }
+    .image--name{
+        font-size: 1.3rem;
+    }
+}
